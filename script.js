@@ -20,6 +20,8 @@ const tickerData = {
 const tickerTracks = document.querySelectorAll('[data-ticker]');
 const updatedAt = document.querySelector('[data-updated-at]');
 const copyButton = document.querySelector('[data-copy-target]');
+const contractAddress = document.getElementById('contractAddress');
+const pumpLinks = document.querySelectorAll('[data-pump-link]');
 
 function renderTicker(track, items) {
   const isMemeTicker = track.dataset.ticker === 'memes';
@@ -62,11 +64,18 @@ if (updatedAt) {
   }).format(new Date());
 }
 
-if (copyButton) {
-  const target = document.getElementById(copyButton.dataset.copyTarget);
-  const text = target ? target.textContent.trim() : '';
-  const hasRealCA = text && !/coming|drops|paste|soon|tbd|syncing|give the site|appear here|moment to push|paste_the_moom_ca|ca_goes_here/i.test(text);
+const text = contractAddress ? contractAddress.textContent.trim() : '';
+const hasRealCA = text && !/coming|drops|paste|soon|tbd|syncing|give the site|appear here|moment to push|paste_the_moom_ca|ca_goes_here/i.test(text);
 
+if (hasRealCA) {
+  const pumpUrl = `https://pump.fun/coin/${encodeURIComponent(text)}`;
+
+  pumpLinks.forEach((link) => {
+    link.href = pumpUrl;
+  });
+}
+
+if (copyButton) {
   if (!hasRealCA) {
     copyButton.disabled = true;
     copyButton.textContent = 'Add CA';
