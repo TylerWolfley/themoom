@@ -219,7 +219,6 @@ main,
 .eyebrow,
 .section-kicker,
 .panel-label,
-.crew-call-kicker,
 .roadmap-phase {
   margin: 0;
   color: var(--lime);
@@ -264,7 +263,6 @@ p {
 .thesis-list p,
 .roadmap-item p:last-child,
 .flight-step p,
-.crew-call-copy,
 .site-footer p {
   color: var(--muted);
 }
@@ -671,35 +669,6 @@ p {
   font-size: 0.82rem;
 }
 
-.crew-call {
-  display: grid;
-  gap: 6px;
-  width: min(480px, 100%);
-  margin: 14px 0 26px;
-  padding-top: 12px;
-  border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-.crew-call-kicker {
-  color: rgba(182, 255, 50, 0.72);
-  font-size: 0.72rem;
-}
-
-.crew-call-copy {
-  font-size: 0.88rem;
-  color: rgba(182, 182, 175, 0.8);
-}
-
-.crew-call-link {
-  color: var(--text);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-}
-
-.crew-call-link:hover,
-.crew-call-link:focus-visible {
-  border-bottom-color: rgba(255, 255, 255, 0.5);
-}
-
 .site-footer {
   display: grid;
   gap: 10px;
@@ -861,7 +830,6 @@ p {
   .eyebrow,
   .section-kicker,
   .panel-label,
-  .crew-call-kicker,
   .roadmap-phase,
   .hero-nav {
     font-size: 0.72rem;
