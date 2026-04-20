@@ -3,327 +3,140 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Official MOOM on Solana. Real contract address, official site, no copycats.">
-  <title>The Moom</title>
-  <meta property="og:title" content="The Moom">
-  <meta property="og:description" content="Official MOOM on Solana. Real contract address, official site, no copycats.">
-  <meta property="og:image" content="assets/full-moom.jpg">
-  <meta property="og:type" content="website">
-  <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="The Moom">
-  <meta name="twitter:description" content="Official MOOM on Solana. Real CA. Real site. No copycats.">
-  <meta name="twitter:image" content="assets/full-moom.jpg">
-  <link rel="icon" type="image/png" href="assets/moom-favicon-cutout.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <title>TYPE</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f7fb;
+      color: #090909;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background:
+        radial-gradient(circle at top, #ffffff 0%, #f6f7fb 56%, #e8edf3 100%);
+      color: #090909;
+    }
+
+    main {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .hero,
+    .reveal {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .hero {
+      min-height: 125vh;
+    }
+
+    .reveal {
+      min-height: 95vh;
+    }
+
+    .wrap {
+      width: min(100%, 640px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      text-align: center;
+    }
+
+    .mark {
+      width: min(100%, 340px);
+      aspect-ratio: 1 / 1;
+      object-fit: contain;
+      image-rendering: auto;
+      mix-blend-mode: multiply;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 4.4rem;
+      font-weight: 900;
+      line-height: 0.92;
+    }
+
+    p {
+      margin: 0;
+      line-height: 1.5;
+    }
+
+    .lead {
+      font-size: 1.15rem;
+      font-weight: 700;
+    }
+
+    .subcopy {
+      max-width: 28rem;
+      font-size: 0.98rem;
+      font-weight: 500;
+      color: #30343a;
+    }
+
+    @media (max-width: 640px) {
+      .hero,
+      .reveal {
+        padding: 28px 16px;
+      }
+
+      .hero {
+        min-height: 120vh;
+      }
+
+      .reveal {
+        min-height: 88vh;
+      }
+
+      .wrap {
+        gap: 14px;
+      }
+
+      .mark {
+        width: min(100%, 260px);
+      }
+
+      h1 {
+        font-size: 3rem;
+      }
+
+      p {
+        font-size: 1rem;
+      }
+
+      .subcopy {
+        font-size: 0.95rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <section class="market-ribbon market-ribbon-top" aria-label="Stock prices">
-    <div class="market-track" data-ticker="stocks"></div>
-  </section>
-
   <main>
-    <section class="hero" id="top">
-      <img class="hero-image" src="assets/full-moom.jpg" alt="Full moom in deep black space">
-      <div class="hero-shade" aria-hidden="true"></div>
-
-      <div class="hero-inner">
-        <nav class="hero-nav" aria-label="Primary">
-          <a href="#launch">Launch</a>
-          <a href="#how-to-buy">How To Buy</a>
-          <a href="#signal">Signal</a>
-          <a href="#roadmap">Roadmap</a>
-          <a href="https://pump.fun/" target="_blank" rel="noreferrer" data-pump-link>Pump.fun</a>
-        </nav>
-
-        <div class="hero-main">
-          <div class="hero-copy">
-            <p class="eyebrow">OFFICIAL MOOM ON SOLANA</p>
-            <h1>THE MOOM</h1>
-            <p class="hero-text">
-              MOOM is the original MOOM on Solana. Launched, copied, still here.
-            </p>
-
-            <div class="hero-actions">
-              <a class="button button-primary" href="#launch">View Launch Stack</a>
-              <a class="button button-secondary" href="#how-to-buy">How To Buy</a>
-              <a class="button button-secondary" href="https://pump.fun/" target="_blank" rel="noreferrer" data-pump-link>Open Pump.fun</a>
-            </div>
-          </div>
-
-          <aside class="hero-rail" aria-label="Live status">
-            <div class="hero-panel">
-              <p class="panel-label">Transmission</p>
-              <strong>ONLINE</strong>
-              <span>Phase: Full Moom</span>
-            </div>
-
-            <div class="hero-panel">
-              <p class="panel-label">Last Update</p>
-              <strong data-updated-at>Loading...</strong>
-              <span>moomsol.com is the official site.</span>
-            </div>
-          </aside>
-        </div>
-
-        <div class="hero-meta" aria-label="Core details">
-          <span>1,000,000,000 supply</span>
-          <span>0% tax</span>
-          <span>Solana native</span>
-          <span>Official site</span>
-        </div>
+    <section class="hero" aria-label="TYPE">
+      <div class="wrap">
+        <img class="mark" src="typegif.gif" alt="TYPE animated mark">
+        <h1>TYPE</h1>
+        <p class="lead">CA: coming soon...</p>
       </div>
     </section>
-
-    <section class="section launch-section" id="launch">
-      <div class="section-head section-head-inline">
-        <div>
-          <p class="section-kicker">Launch Stack</p>
-          <h2>Everything important lives right here.</h2>
-        </div>
-        <p class="section-copy">
-          Official MOOM contract address. Anything else is fake.
-        </p>
-      </div>
-
-      <div class="launch-layout">
-        <article class="launch-primary">
-          <p class="panel-label">Contract Address</p>
-          <div class="ca-row">
-            <p class="ca-value" id="contractAddress">G7VY8nS96eGDaGJaGnAteZuFNFzazHuy1LEGskoBpump</p>
-            <button class="copy-button" type="button" data-copy-target="contractAddress">Copy CA</button>
-          </div>
-          <p class="panel-note">Copied right after launch. This is the real MOOM.</p>
-        </article>
-
-        <article class="launch-mini">
-          <p class="panel-label">Buy Route</p>
-          <h3>Pump.fun</h3>
-          <p class="panel-note">Use the official route from this site.</p>
-          <a class="panel-link" href="https://pump.fun/" target="_blank" rel="noreferrer" data-pump-link>Open Pump.fun</a>
-        </article>
-
-        <article class="launch-mini">
-          <p class="panel-label">Official</p>
-          <h3>Real MOOM</h3>
-          <p class="panel-note">The original project, not a copycat.</p>
-        </article>
-
-        <article class="launch-mini">
-          <p class="panel-label">Signal</p>
-          <h3>Active</h3>
-          <p class="panel-note">Still here. Still building. Still active.</p>
-        </article>
+    <section class="reveal" aria-label="More TYPE">
+      <div class="wrap">
+        <p class="subcopy">The dots are moving. TYPE is almost here.</p>
       </div>
     </section>
-
-    <section class="market-ribbon market-ribbon-mid" aria-label="Solana meme coin prices">
-      <div class="market-track market-track-fast" data-ticker="memes"></div>
-    </section>
-
-    <section class="section buy-section" id="how-to-buy">
-      <div class="section-head section-head-inline">
-        <div>
-          <p class="section-kicker">How To Buy</p>
-          <h2>Three moves. Then you are in.</h2>
-          <p class="section-copy">
-            Verify the exact CA from moomsol.com before you buy. Anything else is fake.
-          </p>
-        </div>
-
-        <div class="sync-whisper">
-          <p class="panel-label">Address Check</p>
-          <p>Match the exact contract address on moomsol.com before you buy.</p>
-        </div>
-      </div>
-
-      <div class="buy-layout">
-        <div class="buy-steps">
-          <article class="buy-step">
-            <span class="buy-step-number">01</span>
-            <div class="buy-step-copy">
-              <h3>Load Your Wallet</h3>
-              <p>Bring enough SOL to buy and cover fees without slowing yourself down.</p>
-            </div>
-          </article>
-
-          <article class="buy-step">
-            <span class="buy-step-number">02</span>
-            <div class="buy-step-copy">
-              <h3>Confirm The CA</h3>
-              <p>Check the exact CA on moomsol.com and match it before you touch anything else.</p>
-            </div>
-          </article>
-
-          <article class="buy-step">
-            <span class="buy-step-number">03</span>
-            <div class="buy-step-copy">
-              <h3>Open Pump.fun</h3>
-              <p>Use the official Pump.fun route from this site and buy the real MOOM.</p>
-              <a class="panel-link" href="https://pump.fun/" target="_blank" rel="noreferrer" data-pump-link>Go To Pump.fun</a>
-            </div>
-          </article>
-        </div>
-
-        <figure class="buy-figure">
-          <img src="assets/bootprint.jpg" alt="Astronaut bootprint pressed into moom dust">
-          <figcaption>Verify the CA on moomsol.com, not from a repost.</figcaption>
-        </figure>
-      </div>
-    </section>
-
-    <section class="section signal-section" id="signal">
-      <div class="section-head section-head-inline">
-        <div>
-          <p class="section-kicker">The Signal</p>
-          <h2>The official home of the real MOOM.</h2>
-        </div>
-        <p class="section-copy">
-          Original MOOM. Official site. Real contract address. Active project.
-        </p>
-      </div>
-
-      <div class="signal-stats">
-        <article class="signal-card">
-          <p class="signal-number">1B</p>
-          <h3>Total Supply</h3>
-          <p>One supply. One real MOOM.</p>
-        </article>
-
-        <article class="signal-card">
-          <p class="signal-number">0%</p>
-          <h3>Tax Drag</h3>
-          <p>Zero tax. No extra games.</p>
-        </article>
-
-        <article class="signal-card">
-          <p class="signal-number">24/7</p>
-          <h3>Still Active</h3>
-          <p>Still posting. Still building. Still here.</p>
-        </article>
-
-        <article class="signal-card">
-          <p class="signal-number">1</p>
-          <h3>What Matters</h3>
-          <p>Use moomsol.com and the CA on this site.</p>
-        </article>
-      </div>
-
-      <div class="signal-body">
-        <div class="signal-copy">
-          <p class="section-kicker">Moom Logic</p>
-          <h2>Plain and simple.</h2>
-          <p class="section-copy">
-            MOOM is the original MOOM on Solana. moomsol.com is the official site. Launch got flooded with copycats. This is the real project and it is still being built.
-          </p>
-
-          <div class="thesis-list">
-            <p><span>01</span> Original MOOM on Solana.</p>
-            <p><span>02</span> Official site and real CA are on moomsol.com.</p>
-            <p><span>03</span> Copycats showed up fast. This project is still active.</p>
-          </div>
-        </div>
-
-        <div class="signal-media">
-          <figure class="signal-image signal-image-main">
-            <img src="assets/lunar-surface.jpg" alt="Detailed cratered surface of the moom">
-          </figure>
-
-          <figure class="signal-image signal-image-accent">
-            <img src="assets/earthrise.jpg" alt="Earth hanging over the moom horizon">
-          </figure>
-        </div>
-      </div>
-    </section>
-
-    <section class="section roadmap-section" id="roadmap">
-      <div class="section-head section-head-inline">
-        <div>
-          <p class="section-kicker">Roadmap</p>
-          <h2>What happens next.</h2>
-        </div>
-        <p class="section-copy">
-          Establish the official identity, push traffic to the real CA, rebuild social proof, expand reach.
-        </p>
-      </div>
-
-      <ol class="roadmap-list">
-        <li class="roadmap-item">
-          <p class="roadmap-phase">Identity Lock</p>
-          <h3>Establish The Real MOOM</h3>
-          <p>Make moomsol.com and the official branding impossible to confuse.</p>
-        </li>
-
-        <li class="roadmap-item">
-          <p class="roadmap-phase">Traffic Return</p>
-          <h3>Push The Real CA</h3>
-          <p>Send every click, post, and buyer to the contract address published on this site.</p>
-        </li>
-
-        <li class="roadmap-item">
-          <p class="roadmap-phase">Social Proof</p>
-          <h3>Rebuild Trust</h3>
-          <p>Keep posting, keep shipping, and rebuild visible proof around the real MOOM.</p>
-        </li>
-
-        <li class="roadmap-item">
-          <p class="roadmap-phase">Reach Expansion</p>
-          <h3>Grow From The Base</h3>
-          <p>Expand reach once the official site and real CA are the default path.</p>
-        </li>
-      </ol>
-    </section>
-
-    <section class="section flight-section" id="why-moom">
-      <div class="section-head">
-        <p class="section-kicker">Why The Real MOOM</p>
-        <h2>Three things to check.</h2>
-      </div>
-
-      <div class="flight-list">
-        <article class="flight-step">
-          <span>01</span>
-          <div>
-            <h3>Official Website And Branding</h3>
-            <p>moomsol.com is the official home of MOOM.</p>
-          </div>
-        </article>
-
-        <article class="flight-step">
-          <span>02</span>
-          <div>
-            <h3>Official Contract Address Published Here</h3>
-            <p>The real CA is published on this site.</p>
-          </div>
-        </article>
-
-        <article class="flight-step">
-          <span>03</span>
-          <div>
-            <h3>Original Project, Not A Copycat</h3>
-            <p>If it is not this site and this CA, it is not the real MOOM.</p>
-          </div>
-        </article>
-      </div>
-    </section>
-
   </main>
-
-  <footer class="site-footer">
-    <div class="footer-links">
-      <a href="#launch">Launch Stack</a>
-      <a href="#how-to-buy">How To Buy</a>
-      <a href="#signal">The Signal</a>
-      <a href="#roadmap">Roadmap</a>
-      <a href="https://pump.fun/" target="_blank" rel="noreferrer" data-pump-link>Pump.fun</a>
-      <a href="#why-moom">Why The Real MOOM</a>
-    </div>
-    <p>The official MOOM on Solana. Real CA. Real site. No copycats.</p>
-    <p class="site-legal">&copy; 2026 The Moom.</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
